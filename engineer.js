@@ -1,9 +1,9 @@
-class Intern {
-  constructor(name, id, email, school) {
+class Engineer {
+  constructor(name, id, email, github) {
     this.name = name;
     this.id = id;
     this.email = email;
-    this.school = school;
+    this.github = github;
   }
   returnName() {
     return this.name;
@@ -15,12 +15,12 @@ class Intern {
     return this.email;
   }
 
-  returnSchool() {
-    return this.school;
+  returnofficeNum() {
+    return this.github;
   }
   returnRole() {
-    return "intern";
+    return "Engineer";
   }
 }
 
-module.exports = Intern;
+module.exports = Engineer;
