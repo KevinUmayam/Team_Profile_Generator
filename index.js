@@ -4,6 +4,10 @@ var inquirer = require("inquirer");
 const fs = require("fs");
 //
 const teamRoster = [];
+//class imports
+const Manager = require("./app_files/manager");
+const Intern = require("./app_files/intern");
+const Engineer = require("./app_files/engineer");
 
 const managerPrompt = () => {
   return (
@@ -281,12 +285,14 @@ const addChoices = () => {
             console.log(`error`);
         }
 
-        console.table(answer);
-        const contentPage = readMe(answer);
-        //calling the readme creater functions
-        fs.writeFile("READMe.md", contentPage, (err) =>
-          err ? console.log(err) : console.log("success")
-        );
+        // console.table(answer);
+        // const contentPage = readMe(answer);
+        // //calling the readme creater functions
+        // fs.writeFile("READMe.md", contentPage, (err) =>
+        //   err ? console.log(err) : console.log("success")
+        // );
       })
   );
 };
+
+addChoices();

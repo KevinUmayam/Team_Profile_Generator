@@ -1,6 +1,29 @@
 {
   "dependencies": {
+    "inquirer": "^8.2.4",
     "jest": "^28.1.3",
     "require": "^2.4.20"
-  }
+  },
+  "name": "team_profile_generator",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "jest test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KevinUmayam/Team_Profile_Generator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KevinUmayam/Team_Profile_Generator/issues"
+  },
+  "homepage": "https://github.com/KevinUmayam/Team_Profile_Generator#readme",
+  "description": ""
 }
