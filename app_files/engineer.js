@@ -6,11 +6,11 @@ class Engineer extends Employee {
     this.github = github;
   }
 
-  returnofficeNum() {
+  returnGithub() {
     return this.github;
   }
   returnRole() {
-    return "Engineer";
+    return "engineer";
   }
 }
 
