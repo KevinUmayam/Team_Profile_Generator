@@ -1,4 +1,4 @@
-const Intern = require("../intern");
+const Intern = require("../app_files/intern");
 
 describe("Visibility", () => {
   it("We make sure that the name being passed is correct", () => {
