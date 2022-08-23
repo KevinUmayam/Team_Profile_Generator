@@ -8,7 +8,16 @@ const teamRoster = [];
 const Manager = require("./app_files/manager");
 const Intern = require("./app_files/intern");
 const Engineer = require("./app_files/engineer");
+//PATHS
+const path = require("path");
+//create an output directory
+const create_DIR = path.resolve(__dirname, "created");
+//join in to the previous create dir to complete the path
+const createPath = path.join(create_DIR, "team.html");
+//htmlbuilder function
+const renderContent = require("./template");
 
+//manager promp
 const managerPrompt = () => {
   return (
     inquirer
@@ -73,12 +82,14 @@ const managerPrompt = () => {
         },
       ])
       .then((answer) => {
+        //create a new manager with the class
         const manager = new Manager(
           answer.name,
           answer.id,
           answer.email,
           answer.officeNum
         );
+        //push the object to the team roster
         teamRoster.push(manager);
         //back
         addChoices();
@@ -280,19 +291,31 @@ const addChoices = () => {
             internPrompt();
             break;
           case "complete team":
-
+            completeTeam();
           default:
             console.log(`error`);
         }
-
-        // console.table(answer);
-        // const contentPage = readMe(answer);
+        // console.log(teamRoster);
+        // // console.table(answer);
+        // // const contentPage = readMe(answer);
         // //calling the readme creater functions
-        // fs.writeFile("READMe.md", contentPage, (err) =>
+        // fs.writeFile("index.html", renderContent(teamRoster), (err) =>
         //   err ? console.log(err) : console.log("success")
         // );
       })
   );
 };
 
+const completeTeam = () => {
+  console.log(teamRoster);
+  //synchronously check if a file already exists in the given path or not.
+  if (!fs.existsSync(create_DIR)) {
+    //if it doesnt exist then create it
+    fs.mkdirSync(create_DIR);
+  }
+  //if it does then run fs
+  fs.writeFileSync(createPath, renderContent(teamRoster), (err) =>
+    err ? console.log(err) : console.log("success")
+  );
+};
 addChoices();
