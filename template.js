@@ -1,9 +1,9 @@
 const renderContent = (team) => {
-  console.log(team);
+  //   console.log(team);
   const htmlTeamCards = [];
 
   const managerCards = (manager) => {
-    console.log(manager);
+    // console.log(manager);
     let mCard = ` 
        <section class="container" id="section">
         <h1 class="titlebox">Manager<i class="fas fa-coffee"></i></h1>
@@ -42,7 +42,7 @@ const renderContent = (team) => {
   };
 
   const engineerCards = (engineer) => {
-    console.log(engineer);
+    // console.log(engineer);
     let eCard = `<section class="container" id="section">
         <h1 class="titlebox">
           Engineer <i class="fas fa-glasses"></i>
@@ -85,7 +85,7 @@ const renderContent = (team) => {
   };
 
   const internCards = (intern) => {
-    console.log(intern);
+    // console.log(intern);
     let iCard = ` <section class="container" id="section">
         <h1 class="titlebox">
           Intern <i class="fas fa-graduation-cap"></i>
@@ -128,13 +128,17 @@ const renderContent = (team) => {
   };
 
   for (let i = 0; i < team.length; i++) {
+    console.log(team[i].returnRole());
     if (team[i].returnRole() === "Manager") {
+      console.log(team[i], "managerif");
       managerCards(team[i]);
     }
     if (team[i].returnRole() === "Engineer") {
+      console.log(team[i]);
       engineerCards(team[i]);
     }
     if (team[i].returnRole() === "Intern") {
+      console.log(team[i]);
       internCards(team[i]);
     }
   }

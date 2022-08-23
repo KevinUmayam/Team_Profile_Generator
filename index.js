@@ -292,8 +292,9 @@ const addChoices = () => {
             break;
           case "complete team":
             completeTeam();
+            break;
           default:
-            console.log(`error`);
+            console.log("no options selected");
         }
         // console.log(teamRoster);
         // // console.table(answer);
@@ -315,7 +316,8 @@ const completeTeam = () => {
   }
   //if it does then run fs
   fs.writeFileSync(createPath, renderContent(teamRoster), (err) =>
-    err ? console.log(err) : console.log("success")
+    err ? console.log(err, "318") : console.log("success")
   );
 };
+
 addChoices();
