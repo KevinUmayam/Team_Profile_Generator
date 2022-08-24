@@ -279,7 +279,7 @@ const addChoices = () => {
         },
       ])
       .then((answer) => {
-        //switch statements to set badges for licence options
+        //switch statements to set call the correct prompt
         switch (answer.choice) {
           case "add a manager":
             managerPrompt();
@@ -296,13 +296,6 @@ const addChoices = () => {
           default:
             console.log("no options selected");
         }
-        // console.log(teamRoster);
-        // // console.table(answer);
-        // // const contentPage = readMe(answer);
-        // //calling the readme creater functions
-        // fs.writeFile("index.html", renderContent(teamRoster), (err) =>
-        //   err ? console.log(err) : console.log("success")
-        // );
       })
   );
 };

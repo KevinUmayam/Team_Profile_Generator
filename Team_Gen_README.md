@@ -2,6 +2,8 @@
 
 link to app github repo: [HERE](https://github.com/KevinUmayam/Team_Profile_Generator)
 
+link to app demo video: [HERE](https://drive.google.com/file/d/1V3UFUPJZHtZN51ZCMSU7x1f7hbdR_geC/view?usp=sharing)
+
 I was able to create a a manager card that displayed all of the required info.
 
 <img src="./assets/manager.png" alt="" width="200px" />
@@ -15,6 +17,7 @@ I was able to create a a intern card that displayed all of the required info.
 <img src="./assets/intern.png" alt="" width="200px" />
 
 the cards all fin on screen with using css grid and you can add any number of each category
+
 <img src="./assets/wholepage.png" alt="" width="200px" />
 
 ## Your Task
