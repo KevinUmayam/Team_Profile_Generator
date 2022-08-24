@@ -1,4 +1,4 @@
-const Manager = require("../app_files/manager");
+const Manager = require("../lib/manager");
 
 describe("Visibility", () => {
   it("We make sure that the name being passed is correct", () => {
@@ -52,6 +52,6 @@ describe("Visibility", () => {
   it("we want to get the proper role return", () => {
     const manager = new Manager("kevin", "12345", "kevin@email.com", "54321");
 
-    expect(manager.returnRole()).toBe("manager");
+    expect(manager.returnRole()).toBe("Manager");
   });
 });

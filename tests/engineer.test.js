@@ -1,4 +1,4 @@
-const Engineer = require("../app_files/engineer");
+const Engineer = require("../lib/engineer");
 
 describe("Visibility", () => {
   it("We make sure that the name being passed is correct", () => {
@@ -97,6 +97,6 @@ describe("Visibility", () => {
       "KevinUmayam"
     );
 
-    expect(engineer.returnRole()).toBe("engineer");
+    expect(engineer.returnRole()).toBe("Engineer");
   });
 });

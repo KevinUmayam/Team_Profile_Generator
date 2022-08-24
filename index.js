@@ -5,9 +5,9 @@ const fs = require("fs");
 //
 const teamRoster = [];
 //class imports
-const Manager = require("./app_files/manager");
-const Intern = require("./app_files/intern");
-const Engineer = require("./app_files/engineer");
+const Manager = require("./lib/manager");
+const Intern = require("./lib/intern");
+const Engineer = require("./lib/engineer");
 //PATHS
 const path = require("path");
 //create an output directory
@@ -15,7 +15,7 @@ const create_DIR = path.resolve(__dirname, "created");
 //join in to the previous create dir to complete the path
 const createPath = path.join(create_DIR, "team.html");
 //htmlbuilder function
-const renderContent = require("./template");
+const renderContent = require("./scr/template");
 
 //manager promp
 const managerPrompt = () => {

@@ -1,4 +1,4 @@
-const Intern = require("../app_files/intern");
+const Intern = require("../lib/intern");
 
 describe("Visibility", () => {
   it("We make sure that the name being passed is correct", () => {
@@ -52,6 +52,6 @@ describe("Visibility", () => {
   it("we want to get the proper role return", () => {
     const intern = new Intern("kevin", "12345", "kevin@email.com", "UCSD");
 
-    expect(intern.returnRole()).toBe("intern");
+    expect(intern.returnRole()).toBe("Intern");
   });
 });

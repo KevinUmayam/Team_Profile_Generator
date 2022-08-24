@@ -1,4 +1,4 @@
-const Employee = require("../app_files/employee");
+const Employee = require("../lib/employee");
 
 describe("Visibility", () => {
   it("We make sure that the name being passed is correct", () => {
