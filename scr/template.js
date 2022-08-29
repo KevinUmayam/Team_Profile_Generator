@@ -70,7 +70,7 @@ const renderContent = (team) => {
                   <div class="smallBoxes underline">
                     <p>Github:</p>
                     <p>
-                      <a href="https://github.com/${engineer.github}"
+                      <a href="https://github.com/${engineer.github}" target=”_blank”
                         >${engineer.github}</a
                       >
                     </p>
@@ -111,11 +111,9 @@ const renderContent = (team) => {
                 </li>
                 <li>
                   <div class="smallBoxes underline">
-                    <p>Github:</p>
+                    <p>School:</p>
                     <p>
-                      <a href="https://github.com/${intern.github}"
-                        >${intern.github}</a
-                      >
+                   ${intern.school}
                     </p>
                   </div>
                 </li>
